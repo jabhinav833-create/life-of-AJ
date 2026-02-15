@@ -1,55 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Life of AJ</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life of AJ</title>
+
+<style>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BODY - Batman Animated Background */
+body {
+    height: 100vh;
+    background: linear-gradient(270deg, #000000, #0a0a0a, #111111);
+    background-size: 600% 600%;
+    animation: backgroundMove 12s ease infinite;
+    color: white;
+}
+
+/* Background Animation */
+@keyframes backgroundMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* NAVBAR */
+nav {
+    padding: 20px 60px;
+    border-bottom: 1px solid #f5c518;
+}
+
+nav a {
+    color: #f5c518;
+    text-decoration: none;
+    margin-right: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    text-shadow: 0 0 10px #f5c518;
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 120px 80px;
+    animation: fadeSlideUp 1.5s ease-out;
+}
+
+/* Fade Animation */
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* NAME GLOW */
+.hero h1 {
+    font-size: 65px;
+    color: #f5c518;
+    text-shadow:
+        0 0 5px #f5c518,
+        0 0 15px #f5c518,
+        0 0 30px #f5c518;
+    margin-bottom: 20px;
+}
+
+/* TEXT */
+.hero p {
+    font-size: 20px;
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 60px;
+    background-color: #111;
+    border-top: 1px solid #222;
+    color: #777;
+}
+</style>
 </head>
-<div class="rain-container"></div>
 
-<script>
- <div class="rain-container"></div>
-
-<script>
-  const rainContainer = document.querySelector(".rain-container");
-
-  for (let i = 0; i < 200; i++) {
-    const drop = document.createElement("div");
-    drop.className = "rain-drop";
-
-    drop.style.left = Math.random() * 100 + "vw";
-    drop.style.animationDuration = 0.5 + Math.random() * 0.7 + "s";
-    drop.style.animationDelay = Math.random() * 5 + "s";
-
-    rainContainer.appendChild(drop);
-  }
-</script>
-<div class="skyline"></div>
 <body>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="journal.html">Journal</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Journal</a>
+    <a href="#">Gallery</a>
+    <a href="#">Contact</a>
 </nav>
 
-<div class="container">
+<section class="hero">
     <h1>Abhinav Jain</h1>
     <p>A quiet collection of days, thoughts, and moments.</p>
     <p>Some days are loud. Some are slow. This space holds both.</p>
-</div>
-
-<div class="lightning"></div>
-
-<script>
-  setInterval(() => {
-    document.querySelector(".lightning").classList.add("flash");
-    setTimeout(() => {
-      document.querySelector(".lightning").classList.remove("flash");
-    }, 200);
-  }, 8000);
-</script>
+</section>
 
 <footer>
     © 2026 Abhinav Jain
@@ -57,6 +119,3 @@
 
 </body>
 </html>
-
-
-
