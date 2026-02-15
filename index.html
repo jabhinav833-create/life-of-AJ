@@ -7,21 +7,23 @@
 <div class="rain-container"></div>
 
 <script>
+ <div class="rain-container"></div>
+
+<script>
   const rainContainer = document.querySelector(".rain-container");
 
-  for (let i = 0; i < 150; i++) {
+  for (let i = 0; i < 200; i++) {
     const drop = document.createElement("div");
-    drop.classList.add("rain-drop");
+    drop.className = "rain-drop";
 
     drop.style.left = Math.random() * 100 + "vw";
-    drop.style.animationDelay = Math.random() * 5 + "s";
     drop.style.animationDuration = 0.5 + Math.random() * 0.7 + "s";
-    drop.style.height = 20 + Math.random() * 25 + "px";
-    drop.style.width = 1 + Math.random() * 2 + "px";
+    drop.style.animationDelay = Math.random() * 5 + "s";
 
     rainContainer.appendChild(drop);
   }
 </script>
+<div class="skyline"></div>
 <body>
 
 <nav>
@@ -44,4 +46,5 @@
 
 </body>
 </html>
+
 
