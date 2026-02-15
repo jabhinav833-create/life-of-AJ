@@ -40,11 +40,23 @@
     <p>Some days are loud. Some are slow. This space holds both.</p>
 </div>
 
+<div class="lightning"></div>
+
+<script>
+  setInterval(() => {
+    document.querySelector(".lightning").classList.add("flash");
+    setTimeout(() => {
+      document.querySelector(".lightning").classList.remove("flash");
+    }, 200);
+  }, 8000);
+</script>
+
 <footer>
     © 2026 Abhinav Jain
 </footer>
 
 </body>
 </html>
+
 
 
