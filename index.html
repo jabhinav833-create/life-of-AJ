@@ -4,6 +4,24 @@
     <title>Life of AJ</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<div class="rain-container"></div>
+
+<script>
+  const rainContainer = document.querySelector(".rain-container");
+
+  for (let i = 0; i < 150; i++) {
+    const drop = document.createElement("div");
+    drop.classList.add("rain-drop");
+
+    drop.style.left = Math.random() * 100 + "vw";
+    drop.style.animationDelay = Math.random() * 5 + "s";
+    drop.style.animationDuration = 0.5 + Math.random() * 0.7 + "s";
+    drop.style.height = 20 + Math.random() * 25 + "px";
+    drop.style.width = 1 + Math.random() * 2 + "px";
+
+    rainContainer.appendChild(drop);
+  }
+</script>
 <body>
 
 <nav>
@@ -26,3 +44,4 @@
 
 </body>
 </html>
+
